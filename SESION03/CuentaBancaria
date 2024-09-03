@@ -1,3 +1,4 @@
+```python
 class CuentaBancaria:
     def _init_(self, numeroCta=None, nombreCliente=None, fechaApertura=None, saldo=0):
         self.__numeroCta = numeroCta
