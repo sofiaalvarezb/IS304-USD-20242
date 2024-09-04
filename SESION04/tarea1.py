@@ -1,3 +1,5 @@
+ Reto #13: Adivina la palabra
+
 Crea un pequeño juego que consista en adivinar palabras en un número máximo de intentos:
 El juego comienza proponiendo una palabra aleatoria incompleta
 Por ejemplo "m_ur_d_v", y el número de intentos que le quedan
