@@ -14,4 +14,11 @@
  */
 
    ```python
-   
+   import random
+
+palabras = ["murcielago", "ordenador", "mariposa", "ventilador", "girasol"]
+
+def ocultar_palabra(palabra):
+    letras_ocultas = random.sample(range(len(palabra)), k=int(len(palabra) * 0.4))
+    palabra_oculta = ''.join([letra if i not in letras_ocultas else '_' for i, letra in enumerate(palabra)])
+    return palabra_oculta
