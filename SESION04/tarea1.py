@@ -12,3 +12,6 @@
  * - La palabra debe ocultar de forma aleatoria letras, y nunca puede comenzar ocultando más del 60%
  * - Puedes utilizar las palabras que quieras y el número de intentos que consideres
  */
+
+   ```python
+   
