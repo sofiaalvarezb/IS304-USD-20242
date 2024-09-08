@@ -41,3 +41,24 @@ def jugar():
             else:
                 print("Palabra incorrecta.")
                 intentos -= 1
+                      
+        elif len(respuesta) == 1:
+            letra = respuesta
+            if letra in palabra:
+                palabra_oculta = ''.join([letra if palabra[i] == letra else palabra_oculta[i] for i in range(len(palabra))])
+                print(f"¡Acertaste! La palabra ahora es: {palabra_oculta}")
+            else:
+                print("Letra incorrecta.")
+                intentos -= 1
+            
+            if palabra_oculta == palabra:
+                print(f"¡Felicidades! Adivinaste la palabra: {palabra}")
+                return
+        
+        else:
+            print("Entrada inválida, debes introducir una letra o intentar adivinar la palabra completa.")
+        
+    print(f"Lo siento, te quedaste sin intentos. La palabra era: {palabra}")
+
+if __name__ == "__main__":
+    jugar()
