@@ -15,11 +15,12 @@
  * - Puedes utilizar las palabras que quieras y el número de intentos que consideres
  */
     
-   import random
+import random
 
-palabras = ["murcielago", "ordenador", "mariposa", "ventilador", "girasol"]
+palabras = ["murcielago", "computadora", "programacion", "desarrollo", "tecnologia"]
 
-def ocultar_palabra(palabra):
-    letras_ocultas = random.sample(range(len(palabra)), k=int(len(palabra) * 0.4))
-    palabra_oculta = ''.join([letra if i not in letras_ocultas else '_' for i, letra in enumerate(palabra)])
-    return palabra_oculta
+def seleccionar_palabra(palabras):
+    palabra = random.choice(palabras)
+    letras_a_ocultar = random.sample(range(len(palabra)), k=int(len(palabra) * 0.4))  # Oculta hasta el 40% de la palabra
+    palabra_oculta = ''.join(['_' if i in letras_a_ocultar else letra for i, letra in enumerate(palabra)])
+    return palabra, palabra_oculta
