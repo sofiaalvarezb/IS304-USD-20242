@@ -24,3 +24,20 @@ def seleccionar_palabra(palabras):
     letras_a_ocultar = random.sample(range(len(palabra)), k=int(len(palabra) * 0.4))  # Oculta hasta el 40% de la palabra
     palabra_oculta = ''.join(['_' if i in letras_a_ocultar else letra for i, letra in enumerate(palabra)])
     return palabra, palabra_oculta
+
+def jugar():
+    palabra, palabra_oculta = seleccionar_palabra(palabras)
+    intentos = 5 
+    print("¡Bienvenido al juego de adivina la palabra!")
+    print(f"La palabra es: {palabra_oculta}")
+    
+    while intentos > 0:
+        respuesta = input(f"Tienes {intentos} intentos. Introduce una letra o la palabra completa: ").lower()
+        
+        if len(respuesta) == len(palabra):
+            if respuesta == palabra:
+                print(f"¡Felicidades! Adivinaste la palabra: {palabra}")
+                return
+            else:
+                print("Palabra incorrecta.")
+                intentos -= 1
